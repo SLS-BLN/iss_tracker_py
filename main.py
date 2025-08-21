@@ -151,6 +151,8 @@ def main():
 
     if is_dark and is_flying_over:
         send_email(message=message, sender=email, password=app_password, recipient=send_to)
+    else:
+        logging.info("No notification sent.")
 
 if __name__ == '__main__':
     main()
